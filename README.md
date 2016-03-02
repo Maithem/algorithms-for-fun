@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 Below is a list of algorithms and data structures that I'm implementing as an
-=======
-Below is a list of algorithms and data structures that I have implemented as an
->>>>>>> 93b7b1b... First Commit
 exercise.
 
 #### Stacks and Queues ####
@@ -49,7 +45,7 @@ exercise.
 
 
 #### Sorting ####
-- [ ] Merge Sort O(nlog(n))
+- [x] Merge Sort O(nlog(n))
 - [ ] Quick Sort O(n^2)
 - [ ] Counting Sort O(n)
 - [ ] Radix Sort O(n)
