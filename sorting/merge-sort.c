@@ -14,8 +14,6 @@
 typedef unsigned int u_i;
 
 void merge(int arr[], u_i start1, u_i end1, u_i start2, u_i end2) {
-  // merge_len can be end2 - start1 + 1, if the caller is restricted
-  // to the following constraint start1 <= end1 < start2 <= end2
   u_i len1 = end1 - start1 + 1;
   u_i len2 = end2 - start2 + 1;
   u_i work_len = len1 + len2;
@@ -53,7 +51,12 @@ void sort(int arr[], u_i start, u_i end) {
 }
 
 int main() {
-  int a[4] = {6, 7, 4, 3};
-  sort(a, 0, 3);
+  int arr[12] = {2, 13, 12, 16, 15, 4, 17, 8, 1, 18, 14, 9};
+  sort(arr, 0, 11);
+  int ind;
+  // TODO(Maithem) create a test driver that runs tests against
+  // different sorting methods with random inputs of varying lengths.
+  for (ind = 0; ind < 12; ind++) printf("%d, ", arr[ind]);
+  printf("\n");
   return 0;
 }
