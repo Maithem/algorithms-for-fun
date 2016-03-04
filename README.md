@@ -46,11 +46,11 @@ exercise.
 
 #### Sorting ####
 - [x] Merge Sort O(nlog(n))
-- [ ] Quick Sort O(n^2)
+- [x] Quick Sort O(n^2)
 - [ ] Counting Sort O(n)
 - [ ] Radix Sort O(n)
 - [ ] Selection Sort O(n^2)
-- [ ] Insertion Sort O(n^2)
+- [x] Insertion Sort O(n^2)
 - [ ] Heap Sort O(nlog(n)) (/Heaps)
 
 
