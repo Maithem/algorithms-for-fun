@@ -11,4 +11,6 @@ void quick_sort(int arr[], u_i len);
 
 void merge_sort(int arr[], u_i len);
 
+void selection_sort(int arr[], u_i len);
+
 #endif

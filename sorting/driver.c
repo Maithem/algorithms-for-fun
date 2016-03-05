@@ -21,7 +21,7 @@ void print_array(int arr[], u_i len) {
     for(ind = 0; ind < len; ind++) {
         printf("%d, ", arr[ind]);
     }
-    printf("}");
+    printf("}\n");
 }
 
 int *copy(int src[], u_i len) {
@@ -49,9 +49,12 @@ int main() {
   int *temp2 = copy(arr, len);
   quick_sort(temp2, len);
   int *temp3 = copy(arr, len);
-  
   merge_sort(temp3, len);
+  int *temp4 = copy(arr, len);
+  selection_sort(temp4, len);
   
-  bool eq = equal(temp1, temp2, len) & equal(temp2, temp3, len);
-  printf("Equal arrays :%s\n", eq ? "true" : "false");
+  bool eq = equal(temp1, temp2, len) &
+            equal(temp2, temp3, len) &
+            equal(temp3, temp4, len);
+  printf("\x1B[32m""Equal arrays :%s\n""\033[0m", eq ? "true" : "false");
 }
