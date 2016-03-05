@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include "sorting.h"
 
 /**
 
@@ -27,9 +26,6 @@
 
 */
 
-
-typedef unsigned int u_i;
-
 void swap(int *a, int *b) {
   if (*a == *b) return;
   *a = *a ^ *b;
@@ -53,21 +49,14 @@ u_i parition(int arr[], u_i start, u_i end) {
   return pivot_ind;
 }
 
-void quick_sort(int arr[], int start, int end) {
-
+void quick_sort_helper(int arr[], int start, int end) {
   if (start >= end) return;
 
   u_i pivot_ind = parition(arr, start, end);
-  quick_sort(arr, start, pivot_ind - 1);
-  quick_sort(arr, pivot_ind + 1, end);
+  quick_sort_helper(arr, start, pivot_ind - 1);
+  quick_sort_helper(arr, pivot_ind + 1, end);
 }
 
-int main() {
-  int ind;
-  // TODO(Maithem) factor out swap and printing functions
-  int arr[12] = {2, 13, 12, 16, 15, 4, 17, 8, 1, 18, 14, 9};
-  quick_sort(arr, 0, 11);
-  for (ind = 0; ind < 12; ind++) printf("%d, ", arr[ind]);
-  printf("\n");
-  return 0;
+void quick_sort(int arr[], u_i len) {
+  quick_sort_helper(arr, 0, len - 1);
 }

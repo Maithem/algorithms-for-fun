@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include "sorting.h"
+
 
 /**
   A merge sort implementation that has space complexity of
@@ -11,7 +12,6 @@
 
 */
 
-typedef unsigned int u_i;
 
 void merge(int arr[], u_i start1, u_i end1, u_i start2, u_i end2) {
   u_i len1 = end1 - start1 + 1;
@@ -41,22 +41,15 @@ void merge(int arr[], u_i start1, u_i end1, u_i start2, u_i end2) {
     arr[start1 + work_ind] = work[work_ind];
 }
 
-void sort(int arr[], u_i start, u_i end) {
+void sort_helper(int arr[], u_i start, u_i end) {
   if (end - start == 0) return;
 
   u_i mid = (start + end) / 2;
-  sort(arr, start, mid);
-  sort(arr, mid + 1, end);
+  sort_helper(arr, start, mid);
+  sort_helper(arr, mid + 1, end);
   merge(arr, start, mid, mid+1, end);
 }
 
-int main() {
-  int arr[12] = {2, 13, 12, 16, 15, 4, 17, 8, 1, 18, 14, 9};
-  sort(arr, 0, 11);
-  int ind;
-  // TODO(Maithem) create a test driver that runs tests against
-  // different sorting methods with random inputs of varying lengths.
-  for (ind = 0; ind < 12; ind++) printf("%d, ", arr[ind]);
-  printf("\n");
-  return 0;
+void merge_sort(int arr[], u_i len) {
+  sort_helper(arr, 0, len - 1);
 }

@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "sorting.h"
 
 /**
 
@@ -20,10 +20,7 @@
 */
 
 
-typedef unsigned int u_i;
-
 void insertion_sort(int arr[], u_i len) {
-
   // arr is trivially sorted because it only has one element
   if (len == 1) return;
 
@@ -41,14 +38,4 @@ void insertion_sort(int arr[], u_i len) {
 
     arr[sub_ind + 1] = key;
   }
-}
-
-
-int main() {
-  int arr[12] = {2, 13, 12, 16, 15, 4, 17, 8, 1, 18, 14, 9};
-  insertion_sort(arr, 12);
-  int ind;
-  for (ind = 0; ind < 12; ind++) printf("%d, ", arr[ind]);
-  printf("\n");
-  return 0;
 }
