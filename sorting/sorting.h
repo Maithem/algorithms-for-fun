@@ -16,4 +16,6 @@ void selection_sort(int arr[], u_i len);
 
 void counting_sort(int arr[], u_i len);
 
+void heap_sort(int arr[], u_i len);
+
 #endif

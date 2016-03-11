@@ -51,7 +51,7 @@ exercise.
 - [ ] Radix Sort O(n)
 - [x] Selection Sort O(n^2)
 - [x] Insertion Sort O(n^2)
-- [ ] Heap Sort O(nlog(n)) (/Heaps)
+- [x] Heap Sort O(nlog(n)) (/Heaps)
 
 
 #### Divide and Conquer ####
