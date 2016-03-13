@@ -28,7 +28,7 @@ exercise.
 
 #### Heaps ####
 - [ ] Heap Implementation
-- [ ] Heap Sort O(nlog(n))
+- [x] Heap Sort O(nlog(n))
 
 
 #### Trees ####
@@ -55,8 +55,8 @@ exercise.
 
 
 #### Divide and Conquer ####
-- [ ] Binary Search O(log(n))
-- [ ] Merge Sort O(nlog(n)) (/Sorting)
+- [x] Binary Search O(log(n))
+- [x] Merge Sort O(nlog(n)) (/Sorting)
 - [ ] Counting Inversions using Merge Sort O(nlog(n))
 - [ ] Closest Pair of Points O(nlog(n))
 
