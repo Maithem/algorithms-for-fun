@@ -1,0 +1,4 @@
+Todo list:
+
+- Free allocated memory for toy programs
+- Validate sorting output against qsort

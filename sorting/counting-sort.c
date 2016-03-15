@@ -24,18 +24,23 @@
   
  **/
 
-void counting_sort(int arr[], u_i len) {
+
+int get(int arr[], int ind) {
+    return arr[ind];
+}
+
+void generic_counting_sort(int arr[], u_i len, int (*get)(int *, int)) {
     // Compute max element in arr
     int max = -1;
     for (int x = 0; x < len; x++) {
-        max = arr[x] > max ? arr[x] : max;
+        max = get(arr, x) > max ? get(arr, x) : max;
     }
     
     // Create a frequency count array
     int aux[max + 1];
     memset(aux, 0, sizeof(aux));
     for (int x = 0; x < len; x++) {
-        aux[arr[x]] += 1;
+        aux[get(arr, x)] += 1;
     }
 
     // Tally freqencies such that the number at index
@@ -48,12 +53,16 @@ void counting_sort(int arr[], u_i len) {
     // position
     int out[len];
     for (int x = len - 1; x >= 0; x--) {
-        out[aux[arr[x]] - 1] = arr[x];
-        aux[arr[x]] -= 1;
+        out[aux[get(arr, x)] - 1] = arr[x];
+        aux[get(arr, x)] -= 1;
     }
     
     // copy back the array
     for (int x = 0; x < len; x++) {
         arr[x] = out[x];
     }
+}
+
+void counting_sort(int arr[], u_i len) {
+    generic_counting_sort(arr, len, get);
 }

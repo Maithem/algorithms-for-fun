@@ -16,6 +16,10 @@ void selection_sort(int arr[], u_i len);
 
 void counting_sort(int arr[], u_i len);
 
+void generic_counting_sort(int arr[], u_i len, int (*get)(int *, int));
+
+void radix_sort(int arr[], u_i len);
+
 void heap_sort(int arr[], u_i len);
 
 #endif

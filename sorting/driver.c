@@ -56,12 +56,15 @@ int main() {
   counting_sort(temp5, len);
   int *temp6 = copy(arr, len);
   heap_sort(temp6, len);
-  
+  int *temp7 = copy(arr, len);
+  radix_sort(temp7, len);
   
   bool eq = equal(temp1, temp2, len) &
             equal(temp2, temp3, len) &
             equal(temp3, temp4, len) &
             equal(temp4, temp5, len) &
-            equal(temp5, temp6, len);
+            equal(temp5, temp6, len) &
+            equal(temp6, temp7, len);
+            
   printf("\x1B[32m""Equal arrays :%s\n""\033[0m", eq ? "true" : "false");
 }
