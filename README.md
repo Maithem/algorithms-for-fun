@@ -48,7 +48,7 @@ exercise.
 - [x] Merge Sort O(nlog(n))
 - [x] Quick Sort O(n^2)
 - [x] Counting Sort O(n)
-- [ ] Radix Sort O(n)
+- [x] Radix Sort O(n)
 - [x] Selection Sort O(n^2)
 - [x] Insertion Sort O(n^2)
 - [x] Heap Sort O(nlog(n)) (/Heaps)

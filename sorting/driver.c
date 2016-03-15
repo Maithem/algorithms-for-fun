@@ -67,4 +67,6 @@ int main() {
             equal(temp6, temp7, len);
             
   printf("\x1B[32m""Equal arrays :%s\n""\033[0m", eq ? "true" : "false");
+  
+  // Free all arrays allocated.
 }
